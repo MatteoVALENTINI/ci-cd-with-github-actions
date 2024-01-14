@@ -1,9 +1,9 @@
 import unittest
-from app import create_app
+from app import app
 
 class FlaskAppTests(unittest.TestCase):
     def setUp(self):
-        self.test_client = create_app().test_client()
+        self.test_client = app().test_client()
         self.test_client.testing = True
 
     # Test to ensure the main page is reachable
